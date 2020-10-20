@@ -1,24 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from './my-react-js';
+let ReactDOM = React;
 
-class App extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            say: '你想说什么fefe',
-        }
-    }
-
-    render() {
-        return (
-            <div>
-                <div>{this.state.say}</div>
-            </div>
-        );
-    }
+function App(props) {
+    const [num, setNum] = React.useState(1)
+    return (
+        <div id="App">
+            <div>{props.title}、{num}</div>
+            <button onClick={() => setNum(num + 1)}>累加</button>
+            <div>源码</div>
+        </div>
+    );
 }
 
+let element = <App title="学习react" />
+
 ReactDOM.render(
-    <App />,
+    element,
     document.getElementById('root')
 );
