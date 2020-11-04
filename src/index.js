@@ -2,7 +2,7 @@ import React from './my-react-js';
 let ReactDOM = React;
 
 function App(props) {
-    const [num, setNum] = React.useState(1)
+    const [num, setNum] = React.useState(1);
     return (
         <div id="App">
             <div>{props.title}、{num}</div>
@@ -11,10 +11,20 @@ function App(props) {
         </div>
     );
 }
-
 let element = <App title="学习react" />
-
 ReactDOM.render(
     element,
     document.getElementById('root')
 );
+
+// let element = (
+//     <div id="App">
+//         <div>学习react</div>
+//         <div>源码</div>
+//     </div>
+// );
+
+// ReactDOM.render(
+//     element,
+//     document.getElementById('root')
+// );
